@@ -1,25 +1,21 @@
 # IaC-Terraform-Despliegue-Instancias-EC2
-Utilizaré terraform como Infraestructure as code (IaC) para realizar despliegues automatizados de máquinas virtuales/instancias en Amazon Web Services
-Para este proyecto necesitaremos una cuenta de AWS e instalar terraform en nuestro equipo local
-Estructura y objetivo:
+<div>
+  <h2>Objetivo del proyecto</h2>
+  <p>
+    El objetivo de esta infraestructura es <strong>desplegar entornos escalables en AWS</strong> 
+    utilizando Terraform. La configuración permite crear y gestionar recursos de red, 
+    instancias de cómputo y salidas automatizadas, garantizando que la infraestructura 
+    pueda crecer y adaptarse según la demanda.
+  </p>
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/724931e0-aadf-41e8-aca0-aa4c7cd057a7" />
-<div>
-Terraform se encargará de:
+ <p>
+    En el <strong>documento Word adjunto</strong> se incluye la 
+    <em>comprobación y guía detallada</em> del proceso de despliegue, 
+    explicando paso a paso cómo aplicar la infraestructura y verificar que los recursos 
+    se han creado correctamente en AWS.
+  </p>
 </div>
-<div>Crear y configurar las instancias EC2.
-</div>
-<div>
-Automatizar implementaciones de entornos ágilmente.
-</div>
-<div>
-Configurar redes (VPC, subnets, grupos de seguridad, etc.).
-</div>
-<div>
-Gestionar claves SSH, etiquetas y volúmenes.
-</div>
-<div>
-Permitir destrucción y recreación controlada del entorno.
-</div>
+
 <div>
   <h3>ec2.tf</h3>
   <p>
@@ -41,9 +37,9 @@ Permitir destrucción y recreación controlada del entorno.
 <div>
   <h3>provider.tf</h3>
   <p>
-    Define el proveedor de infraestructura que se va a usar, en este caso probablemente AWS. 
+    Define el proveedor de infraestructura que se va a usar, en este caso AWS. 
     Incluye la configuración necesaria para autenticarte, como la región y las credenciales. 
-    Por ejemplo, <code>provider "aws" { region = "us-east-1" }</code>.
+    Por ejemplo: <code>provider "aws" { region = "us-east-1" }</code>.
   </p>
 </div>
 
