@@ -98,7 +98,7 @@ Añade la ruta del ejecutable a la variable de entorno PATH
 
 Ejecuta en la terminal:
 
-terraform -version
+```terraform -version```
 
 Si la instalación es correcta, verás la versión instalada.
 
@@ -108,7 +108,7 @@ Terraform necesita acceder a AWS usando las credenciales del usuario IAM.
 
 Ejecuta:
 
-aws configure
+```aws configure```
 
 Introduce:
 
@@ -128,9 +128,8 @@ Esto creará los archivos necesarios en:
 
 Creamos una carpeta para el proyecto:
 
-mkdir terraform-aws-ec2
-cd terraform-aws-ec2
-
+```mkdir terraform-aws-ec2```
+```cd terraform-aws-ec2```
 Dentro de esta carpeta se crearán los archivos .tf.
 
 5️⃣ Crear los archivos de Terraform
@@ -173,7 +172,7 @@ output "public_ip" {
 
 Ejecuta:
 
-terraform init
+```terraform init```
 
 Este comando:
 
@@ -182,17 +181,17 @@ Descarga el proveedor de AWS
 Prepara el entorno de trabajo
 
 7️⃣ Validar la configuración
-terraform validate
+```terraform validate```
 
 Comprueba que la sintaxis es correcta.
 
 8️⃣ Ver el plan de ejecución
-terraform plan
+```terraform plan```
 
 Muestra los recursos que Terraform va a crear sin aplicarlos aún.
 
 9️⃣ Desplegar la infraestructura
-terraform apply
+```terraform apply```
 
 Confirma escribiendo yes.
 
@@ -202,7 +201,7 @@ Terraform creará la instancia EC2 automáticamente.
 
 Para borrar todos los recursos creados:
 
-terraform destroy
+```terraform destroy```
 
 ⚠️ Esto eliminará la instancia EC2.
 
