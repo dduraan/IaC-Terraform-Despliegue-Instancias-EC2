@@ -51,14 +51,6 @@
     Por ejemplo, variables para el tipo de instancia, la región o el nombre del proyecto.
   </p>
 </div>
-
-<div>
-  <h3>vpc.tf</h3>
-  <p>
-    Define los recursos de red: la VPC (Virtual Private Cloud), subredes, gateways, tablas de rutas, 
-    grupos de seguridad, etc. Es la base de la infraestructura de red donde se desplegarán los demás recursos.
-  </p>
-</div>
 1️⃣ Crear un usuario IAM con permisos
 
 Antes de usar Terraform con AWS, necesitamos un usuario con permisos para crear recursos.
