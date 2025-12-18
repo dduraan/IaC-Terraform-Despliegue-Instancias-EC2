@@ -70,6 +70,8 @@ Accede a la Consola de AWS
 Ve al servicio IAM
 
 Selecciona Usuarios → Crear usuario
+<img width="886" height="355" alt="image" src="https://github.com/user-attachments/assets/5bcb24fc-1318-4e85-9505-27d46fdad90b" />
+
 
 Asigna un nombre (por ejemplo: terraform-user)
 
@@ -80,8 +82,19 @@ En permisos, puedes:
 Asignar la política AdministratorAccess (solo para prácticas)
 
 O crear una política personalizada con permisos sobre EC2, VPC, etc.
+<img width="886" height="410" alt="image" src="https://github.com/user-attachments/assets/fe074da9-13cf-4d74-8e41-ba1faa1acd8d" />
+
 
 Finaliza la creación y guarda el Access Key y Secret Key
+<img width="886" height="128" alt="image" src="https://github.com/user-attachments/assets/aa35b8bd-441a-479f-a8e1-e2ea2c588910" />
+<img width="886" height="391" alt="image" src="https://github.com/user-attachments/assets/da173d01-87da-4295-a67d-d79337481024" />
+<img width="886" height="499" alt="image" src="https://github.com/user-attachments/assets/abe3d3a9-2e9f-425c-aecd-50fca0f730d0" />
+<img width="886" height="369" alt="image" src="https://github.com/user-attachments/assets/34feecc2-5b00-4e2b-ad28-4cccc9c2a4ca" />
+<img width="886" height="47" alt="image" src="https://github.com/user-attachments/assets/c083085a-8c7e-4f36-ae3f-02624a7a81f3" />
+<img width="567" height="255" alt="image" src="https://github.com/user-attachments/assets/bf8734f2-c672-4666-9718-b64936c0aa13" />
+
+
+
 
 ⚠️ Importante: No compartas estas credenciales ni las subas a GitHub.
 
@@ -93,12 +106,20 @@ Descarga Terraform desde: https://developer.hashicorp.com/terraform/downloads
 Extrae el binario
 
 Añade la ruta del ejecutable a la variable de entorno PATH
+<img width="641" height="767" alt="image" src="https://github.com/user-attachments/assets/42bb3b5d-cc55-4068-aa49-b08cc9eca5ef" />
+<img width="886" height="969" alt="image" src="https://github.com/user-attachments/assets/19e56157-5f62-40ac-b407-00f21a58ebb4" />
+<img width="886" height="326" alt="image" src="https://github.com/user-attachments/assets/fa25a0b4-9736-48ad-9b86-01a9f408d818" />
+
+
+
 
 🔹 Verificación
 
 Ejecuta en la terminal:
 
 ```terraform -version```
+<img width="886" height="145" alt="image" src="https://github.com/user-attachments/assets/4152868d-3767-4912-9e01-a0038d7974c9" />
+
 
 Si la instalación es correcta, verás la versión instalada.
 
@@ -125,12 +146,16 @@ Esto creará los archivos necesarios en:
 ~/.aws/credentials
 ~/.aws/config
 4️⃣ Crear el directorio del proyecto
+<img width="695" height="215" alt="image" src="https://github.com/user-attachments/assets/c1efa6e1-9e7f-4213-a506-671710c88c03" />
+
 
 Creamos una carpeta para el proyecto:
 
 ```mkdir terraform-aws-ec2```
 ```cd terraform-aws-ec2```
 Dentro de esta carpeta se crearán los archivos .tf.
+<img width="886" height="225" alt="image" src="https://github.com/user-attachments/assets/caf7a5c6-65f9-4329-aec1-78dc4517d4af" />
+
 
 5️⃣ Crear los archivos de Terraform
 📄 main.tf
@@ -169,6 +194,8 @@ output "public_ip" {
   value       = aws_instance.mi_instancia.public_ip
 }
 6️⃣ Inicializar Terraform
+<img width="886" height="567" alt="image" src="https://github.com/user-attachments/assets/23d454b0-4b66-41bc-939f-ece982da9639" />
+
 
 Ejecuta:
 
@@ -181,23 +208,43 @@ Descarga el proveedor de AWS
 Prepara el entorno de trabajo
 
 7️⃣ Validar la configuración
+<img width="675" height="145" alt="image" src="https://github.com/user-attachments/assets/3289110c-6ea2-4c1d-96dc-993967738685" />
+
 ```terraform validate```
 
 Comprueba que la sintaxis es correcta.
 
 8️⃣ Ver el plan de ejecución
+<img width="886" height="399" alt="image" src="https://github.com/user-attachments/assets/58be6437-117a-45d6-900d-7af1d71dee04" />
+
 ```terraform plan```
 
 Muestra los recursos que Terraform va a crear sin aplicarlos aún.
 
 9️⃣ Desplegar la infraestructura
+<img width="886" height="112" alt="image" src="https://github.com/user-attachments/assets/8d115889-d745-496b-a4de-f60a1d4bf692" />
+
 ```terraform apply```
+<img width="886" height="255" alt="image" src="https://github.com/user-attachments/assets/3393374b-3654-4ee8-89bf-229836259abd" />
+
 
 Confirma escribiendo yes.
 
 Terraform creará la instancia EC2 automáticamente.
+<img width="886" height="394" alt="image" src="https://github.com/user-attachments/assets/45ec16c1-2386-457c-9db4-a377de980c80" />
+<img width="886" height="208" alt="image" src="https://github.com/user-attachments/assets/62b33b25-f802-49a2-a5e9-447244af75f4" />
+<img width="886" height="316" alt="image" src="https://github.com/user-attachments/assets/da1013a9-d73a-4ec2-b46f-1ad6b057ddcf" />
+<img width="813" height="124" alt="image" src="https://github.com/user-attachments/assets/63841d6c-2005-4fb7-b942-c5115b76f6be" />
+<img width="886" height="166" alt="image" src="https://github.com/user-attachments/assets/ef1d2d54-f956-47fd-8e57-d7a17527b1a2" />
+
+
+
 
 🔟 Eliminar la infraestructura
+<img width="886" height="177" alt="image" src="https://github.com/user-attachments/assets/21f8a897-aebe-4c1b-aa39-aadb9020095d" />
+<img width="886" height="319" alt="image" src="https://github.com/user-attachments/assets/dc21a768-ca35-41d6-86ac-a61a97d928fd" />
+
+
 
 Para borrar todos los recursos creados:
 
