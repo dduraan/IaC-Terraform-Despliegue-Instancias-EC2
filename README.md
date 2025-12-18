@@ -158,41 +158,13 @@ Dentro de esta carpeta se crearán los archivos .tf.
 
 
 5️⃣ Crear los archivos de Terraform
-📄 main.tf
+<h3>provider.tf</h3>
+<h3>ec2.tf</h3>
+<h3>outputs.tf</h3>
+<h3>s3.tf</h3>
+<h3>variables.tf</h3>
+<i>Todo el código de estos ficheros se encuentra incluido en el repositorio del proyecto</i>
 
-Define el proveedor y el recurso EC2:
-
-provider "aws" {
-  region = "eu-west-1"
-}
-
-
-resource "aws_instance" "mi_instancia" {
-  ami           = "ami-0abcdef1234567890"
-  instance_type = "t2.micro"
-
-
-  tags = {
-    Name = "Instancia-Terraform"
-  }
-}
-
-📌 Notas:
-
-Cambia el ami por una válida en tu región
-
-t2.micro es gratuita en el Free Tier
-
-📄 variables.tf (opcional)
-variable "region" {
-  description = "Región de AWS"
-  default     = "eu-west-1"
-}
-📄 outputs.tf (opcional)
-output "public_ip" {
-  description = "IP pública de la instancia"
-  value       = aws_instance.mi_instancia.public_ip
-}
 6️⃣ Inicializar Terraform
 <img width="886" height="567" alt="image" src="https://github.com/user-attachments/assets/23d454b0-4b66-41bc-939f-ece982da9639" />
 
